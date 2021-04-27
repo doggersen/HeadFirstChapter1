@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
 
+
 namespace MatchGame
 {
     /// <summary>
@@ -16,7 +17,7 @@ namespace MatchGame
         private DispatcherTimer timer = new DispatcherTimer();
         private int tenthsOfSecondsElapsed;
         private int matchesFound;
-
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -57,6 +58,7 @@ namespace MatchGame
             {
                 if (textBlock.Name != "timeTextBlock")
                 {
+                    textBlock.Visibility = Visibility.Visible;
                     int index = random.Next(animalEmoji.Count);
                     string nextEmoji = animalEmoji[index];
                     textBlock.Text = nextEmoji;
